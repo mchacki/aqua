@@ -1,0 +1,709 @@
+2020-04-12T15:06:18Z [69906] INFO [e52b0] ArangoDB 3.7.0-devel enterprise [darwin] 64bit maintainer mode, using build heads/bug-fix/traversal-estimates-0-g71aab81a93, VPack 0.1.33, RocksDB 6.8.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1d  10 Sep 2019
+2020-04-12T15:06:18Z [69906] WARNING [0458b] This is a maintainer version intended for debugging. DO NOT USE IN PRODUCTION!
+2020-04-12T15:06:18Z [69906] WARNING [bd666] ==============================================================================
+2020-04-12T15:06:18Z [69906] INFO [144fe] using storage engine 'rocksdb'
+2020-04-12T15:06:18Z [69906] INFO [43396] {authentication} Jwt secret not specified, generating...
+2020-04-12T15:06:18Z [69906] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2020-04-12T15:06:18Z [69906] INFO [6ea38] using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2020-04-12T15:06:18Z [69906] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is unlimited, soft limit is 8192
+2020-04-12T15:06:18Z [69906] INFO [3844e] {authentication} Authentication is turned on (system only), authentication for unix sockets is turned on
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '7', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '13', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '19', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '22', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '28', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '37', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '40', rebuilding
+2020-04-12T15:06:18Z [69906] WARNING [ecdbc] {engines} no revision tree found for collection with id '43', rebuilding
+2020-04-12T15:06:18Z [69906] DEBUG [cf921] {queries} AQL feature started
+2020-04-12T15:06:18Z [69906] INFO [65273] {backup} Checking if old data from before a restore operation needs to be deleted in the background, scheduling...
+2020-04-12T15:06:18Z [69906] INFO [fdedb] {backup} Checking if pre restore data needs to be deleted...
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 5.96046e-06 Query::Query queryString: FOR doc IN @@collection FILTER doc.`autoload` == true  RETURN doc this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@collection":"_modules"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.000109911 Query::executeV8 this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000144958 Query::enterState: initializing this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000182867 Query::enterState: parsing this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000211 Query::prepare this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000315905 Query::enterState: optimizing ast this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000360012 Query::enterState: loading collections this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00040102 Query::enterState: instantiating plan this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000468969 Query::enterState: optimizing plan this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000818014 Query::enterState: executing this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#333] starting statemachine of executor type=ReturnNode this=140565412922416 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#333] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#333] starting statemachine of executor type=EnumerateCollectionNode this=140565421312512 id=2
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#333] type=EnumerateCollectionNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#333] starting statemachine of executor type=SingletonNode this=140565412919888 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#333] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#333] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#333] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#333] type=SingletonNode this=140565412919888 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#333] type=EnumerateCollectionNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#333] type=EnumerateCollectionNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#333] type=EnumerateCollectionNode this=140565421312512 id=2 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#333] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#333] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#333] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#333] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#333] type=ReturnNode this=140565412922416 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00176597 Query::finalize: before _trx->commit this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00180602 Query::finalize: before cleanupPlanAndEngine this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00183606 Query::enterState: finalizing this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00189996 Query::finalize:returning this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00196695 Query::~Query this: 140732659328496
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 2.86102e-06 Query::Query queryString: \n      FOR service IN @@value0\n      FILTER service.mount == @value1\n      RETURN service\n     this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@value0":"_apps","value1":"/test"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 9.58443e-05 Query::executeV8 this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000125885 Query::enterState: initializing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000154972 Query::enterState: parsing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000182867 Query::prepare this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000232935 Query::enterState: optimizing ast this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000266075 Query::enterState: loading collections this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000298023 Query::enterState: instantiating plan this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000334024 Query::enterState: optimizing plan this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000499964 Query::enterState: executing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#335] starting statemachine of executor type=ReturnNode this=140565412937216 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#335] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#335] starting statemachine of executor type=IndexNode this=140565421312512 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=IndexNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=IndexNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#335] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#335] starting statemachine of executor type=SingletonNode this=140565412935296 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#335] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#335] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#335] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#335] type=SingletonNode this=140565412935296 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=IndexNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=IndexNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#335] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#335] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#335] type=IndexNode this=140565421312512 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#335] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#335] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#335] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#335] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#335] type=ReturnNode this=140565412937216 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00148702 Query::finalize: before _trx->commit this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00152087 Query::finalize: before cleanupPlanAndEngine this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00154901 Query::enterState: finalizing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00159788 Query::finalize:returning this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00164485 Query::~Query this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 1.90735e-06 Query::Query queryString: \n      FOR service IN @@value0\n      FILTER service.mount == @value1\n      RETURN service\n     this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@value0":"_apps","value1":"/hunde"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 9.48906e-05 Query::executeV8 this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000124931 Query::enterState: initializing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000154018 Query::enterState: parsing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000181913 Query::prepare this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000231028 Query::enterState: optimizing ast this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000263929 Query::enterState: loading collections this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00029397 Query::enterState: instantiating plan this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000329018 Query::enterState: optimizing plan this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000455856 Query::enterState: executing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#338] starting statemachine of executor type=ReturnNode this=140565412953104 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#338] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#338] starting statemachine of executor type=IndexNode this=140565421312512 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=IndexNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=IndexNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#338] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#338] starting statemachine of executor type=SingletonNode this=140565412951072 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#338] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#338] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#338] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#338] type=SingletonNode this=140565412951072 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=IndexNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=IndexNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#338] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#338] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#338] type=IndexNode this=140565421312512 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#338] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#338] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#338] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#338] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#338] type=ReturnNode this=140565412953104 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00134492 Query::finalize: before _trx->commit this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00137806 Query::finalize: before cleanupPlanAndEngine this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00140691 Query::enterState: finalizing this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00145507 Query::finalize:returning this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00150204 Query::~Query this: 140732659328720
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 2.86102e-06 Query::Query queryString: \n    FOR doc IN @@value0\n    FILTER LEFT(doc.mount, 2) != "/_"\n    LET bundleExists = DOCUMENT(@@value1, doc.checksum) != null\n    RETURN [doc.mount, doc.checksum, doc._rev, bundleExists]\n   this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@value0":"_apps","@value1":"_appbundles"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.000131845 Query::executeV8 this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000169992 Query::enterState: initializing this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000211954 Query::enterState: parsing this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000249863 Query::prepare this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000323772 Query::enterState: optimizing ast this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000374794 Query::enterState: loading collections this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000418901 Query::enterState: instantiating plan this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00047493 Query::enterState: optimizing plan this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000760794 Query::enterState: executing this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#341] starting statemachine of executor type=ReturnNode this=140565412935296 id=7
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#341] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#341] starting statemachine of executor type=CalculationNode this=140565421426176 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=CalculationNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=CalculationNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#341] type=CalculationNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#341] starting statemachine of executor type=CalculationNode this=140565421285888 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=CalculationNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=CalculationNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#341] type=CalculationNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#341] starting statemachine of executor type=EnumerateCollectionNode this=140565396751360 id=2
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#341] type=EnumerateCollectionNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#341] starting statemachine of executor type=SingletonNode this=140565385012272 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#341] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#341] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#341] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#341] type=SingletonNode this=140565385012272 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#341] type=EnumerateCollectionNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#341] type=EnumerateCollectionNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#341] type=EnumerateCollectionNode this=140565396751360 id=2 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=CalculationNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=CalculationNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#341] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#341] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#341] type=CalculationNode this=140565421285888 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=CalculationNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=CalculationNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#341] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#341] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#341] type=CalculationNode this=140565421426176 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#341] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#341] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#341] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#341] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#341] type=ReturnNode this=140565412935296 id=7 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00228381 Query::finalize: before _trx->commit this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00231695 Query::finalize: before cleanupPlanAndEngine this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0023458 Query::enterState: finalizing this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00240684 Query::finalize:returning this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.0024569 Query::~Query this: 140732659328320
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 2.86102e-06 Query::Query queryString: FOR doc IN @@collection FILTER doc.`mount` == "/_admin/aardvark" LIMIT 0, 1  RETURN doc this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@collection":"_apps"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 9.39369e-05 Query::executeV8 this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000123024 Query::enterState: initializing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000151873 Query::enterState: parsing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000183821 Query::prepare this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000236034 Query::enterState: optimizing ast this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000267982 Query::enterState: loading collections this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000300884 Query::enterState: instantiating plan this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000337839 Query::enterState: optimizing plan this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000485897 Query::enterState: executing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#343] starting statemachine of executor type=ReturnNode this=140565412988000 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#343] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#343] starting statemachine of executor type=LimitNode this=140565412986592 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#343] type=LimitNode request dependency { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#343] starting statemachine of executor type=IndexNode this=140565421312512 id=7
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#343] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#343] starting statemachine of executor type=SingletonNode this=140565412984544 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#343] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#343] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#343] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#343] type=SingletonNode this=140565412984544 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#343] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#343] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#343] type=IndexNode this=140565421312512 id=7 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#343] type=LimitNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#343] type=LimitNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#343] type=LimitNode this=140565412986592 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#343] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#343] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#343] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#343] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#343] type=ReturnNode this=140565412988000 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00163889 Query::finalize: before _trx->commit this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00167084 Query::finalize: before cleanupPlanAndEngine this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00169897 Query::enterState: finalizing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00174904 Query::finalize:returning this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00179601 Query::~Query this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 1.00136e-05 Query::Query queryString: FOR doc IN @@collection FILTER doc.`mount` == "/_api/foxx" LIMIT 0, 1  RETURN doc this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@collection":"_apps"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.000158072 Query::executeV8 this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00020504 Query::enterState: initializing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000250101 Query::enterState: parsing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000293016 Query::prepare this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000399113 Query::enterState: optimizing ast this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000447989 Query::enterState: loading collections this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000500202 Query::enterState: instantiating plan this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000560999 Query::enterState: optimizing plan this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000785112 Query::enterState: executing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#345] starting statemachine of executor type=ReturnNode this=140565385015488 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#345] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#345] starting statemachine of executor type=LimitNode this=140565385013968 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#345] type=LimitNode request dependency { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#345] starting statemachine of executor type=IndexNode this=140565396749824 id=7
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#345] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#345] starting statemachine of executor type=SingletonNode this=140565385011696 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#345] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#345] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#345] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#345] type=SingletonNode this=140565385011696 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#345] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#345] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#345] type=IndexNode this=140565396749824 id=7 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#345] type=LimitNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#345] type=LimitNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#345] type=LimitNode this=140565385013968 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#345] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#345] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#345] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#345] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#345] type=ReturnNode this=140565385015488 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00258517 Query::finalize: before _trx->commit this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00264001 Query::finalize: before cleanupPlanAndEngine this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00268316 Query::enterState: finalizing this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.0027771 Query::finalize:returning this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00287509 Query::~Query this: 140732659327632
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 6.91414e-06 Query::Query queryString: FOR doc IN @@collection  RETURN doc this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@collection":"_apps"}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.02722 Query::executeV8 this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0283709 Query::enterState: initializing this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0285521 Query::enterState: parsing this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.0287211 Query::prepare this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.028933 Query::enterState: optimizing ast this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0292509 Query::enterState: loading collections this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0293181 Query::enterState: instantiating plan this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.029376 Query::enterState: optimizing plan this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0295551 Query::enterState: executing this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#347] starting statemachine of executor type=ReturnNode this=140565385017152 id=3
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#347] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#347] starting statemachine of executor type=EnumerateCollectionNode this=140565396755968 id=2
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#347] type=EnumerateCollectionNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#347] starting statemachine of executor type=SingletonNode this=140565385003008 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#347] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#347] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#347] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#347] type=SingletonNode this=140565385003008 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#347] type=EnumerateCollectionNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#347] type=EnumerateCollectionNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#347] type=EnumerateCollectionNode this=140565396755968 id=2 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#347] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#347] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#347] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#347] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#347] type=ReturnNode this=140565385017152 id=3 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.0311151 Query::finalize: before _trx->commit this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.0311859 Query::finalize: before cleanupPlanAndEngine this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0312331 Query::enterState: finalizing this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.0313151 Query::finalize:returning this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.0313919 Query::~Query this: 140732659327712
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 1.00136e-05 Query::Query queryString: \n      FOR doc IN _jobs\n        FILTER doc.status == 'progress'\n          UPDATE doc\n        WITH { status: 'pending' }\n        IN _jobs this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"ttl":5,"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.000200987 Query::executeV8 this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000257969 Query::enterState: initializing this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000313044 Query::enterState: parsing this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.00036788 Query::prepare this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00051403 Query::enterState: optimizing ast this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000581026 Query::enterState: loading collections this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000643969 Query::enterState: instantiating plan this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000730991 Query::enterState: optimizing plan this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0010879 Query::enterState: executing this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#350] starting statemachine of executor type=UpdateNode this=140565396726784 id=6
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=UpdateNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=UpdateNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#350] type=UpdateNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#350] starting statemachine of executor type=IndexNode this=140565396735488 id=7
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#350] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#350] starting statemachine of executor type=CalculationNode this=140565396662784 id=5
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#350] type=CalculationNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#350] starting statemachine of executor type=SingletonNode this=140565384999488 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#350] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#350] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#350] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#350] type=SingletonNode this=140565384999488 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#350] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#350] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#350] type=CalculationNode this=140565396662784 id=5 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#350] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#350] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#350] type=IndexNode this=140565396735488 id=7 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#350] type=UpdateNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#350] type=UpdateNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#350] type=UpdateNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#350] type=UpdateNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#350] type=UpdateNode this=140565396726784 id=6 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00325298 Query::finalize: before _trx->commit this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00334096 Query::finalize: before cleanupPlanAndEngine this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.0033989 Query::enterState: finalizing this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00354505 Query::finalize:returning this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00368595 Query::~Query this: 140732659328528
+2020-04-12T15:06:18Z [69906] DEBUG [11160] {queries} 5.96046e-06 Query::Query queryString: \n      LET queues = (FOR queue IN _queues RETURN queue._key)\n      FOR job IN _jobs\n        FILTER ('pending' == job.status)\n        FILTER POSITION(queues, job.queue, false)\n        FILTER (null != job.delayUntil)\n      SORT job.delayUntil ASC\n      LIMIT 1\n      RETURN job.delayUntil this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [16a3f] {queries} bindParameters: {}
+2020-04-12T15:06:18Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:18Z [69906] DEBUG [6cac7] {queries} 0.000156164 Query::executeV8 this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000210047 Query::enterState: initializing this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000262976 Query::enterState: parsing this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [9625e] {queries} 0.000313997 Query::prepare this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000444174 Query::enterState: optimizing ast this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000506163 Query::enterState: loading collections this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000560999 Query::enterState: instantiating plan this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.000658035 Query::enterState: optimizing plan this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.001472 Query::enterState: executing this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=ReturnNode this=140565385072944 id=18
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=LimitNode this=140565385071472 id=16
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=LimitNode request dependency { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=SortNode this=140565396722176 id=15
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SortNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SortNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=SortNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=CalculationNode this=140565396161024 id=14
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=CalculationNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=FilterNode this=140565385068560 id=11
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=FilterNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=FilterNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=FilterNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=CalculationNode this=140565396399104 id=10
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=CalculationNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=IndexNode this=140565396720640 id=19
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=SubqueryEndNode this=140565385064736 id=22
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SubqueryEndNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SubqueryEndNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=SubqueryEndNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=CalculationNode this=140565396707840 id=4
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=CalculationNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=IndexNode this=140565396853248 id=20
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=IndexNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=SubqueryStartNode this=140565385061424 id=21
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SubqueryStartNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SubqueryStartNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=SubqueryStartNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [007ac] {queries} [query#352] starting statemachine of executor type=SingletonNode this=140565385059824 id=1
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [488de] {queries} [query#352] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=SingletonNode this=140565385059824 id=1 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SubqueryStartNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SubqueryStartNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=SubqueryStartNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#352] type=SubqueryStartNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [7c63c] {queries} [query#352] type=SubqueryStartNode (sub-)query completed. Move ShadowRows.
+2020-04-12T15:06:18Z [69906] DEBUG [0ca35] {queries} [query#352] type=SubqueryStartNode ShadowRows moved, continue with next subquery.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SubqueryStartNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SubqueryStartNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=SubqueryStartNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#352] type=SubqueryStartNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=SubqueryStartNode this=140565385061424 id=21 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [7c63c] {queries} [query#352] type=IndexNode (sub-)query completed. Move ShadowRows.
+2020-04-12T15:06:18Z [69906] DEBUG [6d337] {queries} [query#352] type=IndexNode init executor.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=IndexNode this=140565396853248 id=20 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [7c63c] {queries} [query#352] type=CalculationNode (sub-)query completed. Move ShadowRows.
+2020-04-12T15:06:18Z [69906] DEBUG [6d337] {queries} [query#352] type=CalculationNode init executor.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=CalculationNode this=140565396707840 id=4 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SubqueryEndNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SubqueryEndNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=SubqueryEndNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=SubqueryEndNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [7c63c] {queries} [query#352] type=SubqueryEndNode (sub-)query completed. Move ShadowRows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=SubqueryEndNode this=140565385064736 id=22 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=IndexNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=IndexNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=IndexNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=IndexNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=IndexNode this=140565396720640 id=19 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=CalculationNode this=140565396399104 id=10 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=FilterNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=FilterNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=FilterNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=FilterNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=FilterNode this=140565385068560 id=11 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=CalculationNode this=140565396161024 id=14 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=SortNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=SortNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: 1, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=SortNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=SortNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=SortNode this=140565396722176 id=15 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=LimitNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=LimitNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=LimitNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [2890e] {queries} [query#352] type=LimitNode fast forward.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=LimitNode this=140565385071472 id=16 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [cfe46] {queries} [query#352] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [1f786] {queries} [query#352] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:18Z [69906] DEBUG [96e2c] {queries} [query#352] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:18Z [69906] DEBUG [fa327] {queries} [query#352] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:18Z [69906] DEBUG [80c24] {queries} [query#352] type=ReturnNode this=140565385072944 id=18 local statemachine done. Return now.
+2020-04-12T15:06:18Z [69906] DEBUG [fc22c] {queries} 0.00815296 Query::finalize: before _trx->commit this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [7ef18] {queries} 0.00823712 Query::finalize: before cleanupPlanAndEngine this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [d8767] {queries} 0.00829506 Query::enterState: finalizing this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [95996] {queries} 0.00853801 Query::finalize:returning this: 140732659328400
+2020-04-12T15:06:18Z [69906] DEBUG [f5cee] {queries} 0.00868201 Query::~Query this: 140732659328400
+2020-04-12T15:06:18Z [69906] INFO [365ec] You are using a milestone/alpha/beta/preview version ('3.7.0-devel') of ArangoDB
+2020-04-12T15:06:19Z [69906] DEBUG [11160] {queries} 7.86781e-06 Query::Query queryString: FOR doc IN @@collection FILTER doc.`autoload` == true  RETURN doc this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [16a3f] {queries} bindParameters: {"@collection":"_modules"}
+2020-04-12T15:06:19Z [69906] DEBUG [0b7cb] {queries} options: {"count":false}
+2020-04-12T15:06:19Z [69906] DEBUG [6cac7] {queries} 0.000205994 Query::executeV8 this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000250816 Query::enterState: initializing this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000295877 Query::enterState: parsing this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [9625e] {queries} 0.000337839 Query::prepare this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000423908 Query::enterState: optimizing ast this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000473976 Query::enterState: loading collections this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000522852 Query::enterState: instantiating plan this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.00057888 Query::enterState: optimizing plan this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000824928 Query::enterState: executing this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#355] starting statemachine of executor type=ReturnNode this=140565415029776 id=5
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#355] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#355] starting statemachine of executor type=EnumerateCollectionNode this=140565404751872 id=2
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#355] type=EnumerateCollectionNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#355] starting statemachine of executor type=SingletonNode this=140565415028384 id=1
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#355] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#355] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#355] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#355] type=SingletonNode this=140565415028384 id=1 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#355] type=EnumerateCollectionNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#355] type=EnumerateCollectionNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#355] type=EnumerateCollectionNode this=140565404751872 id=2 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#355] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#355] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#355] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#355] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#355] type=ReturnNode this=140565415029776 id=5 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [fc22c] {queries} 0.00210285 Query::finalize: before _trx->commit this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [7ef18] {queries} 0.00214982 Query::finalize: before cleanupPlanAndEngine this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.00219202 Query::enterState: finalizing this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [95996] {queries} 0.00226784 Query::finalize:returning this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [f5cee] {queries} 0.00235295 Query::~Query this: 140732659328496
+2020-04-12T15:06:19Z [69906] DEBUG [11160] {queries} 1.90735e-06 Query::Query queryString: FOR user IN _users RETURN user this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [e8ed7] {queries} 5.91278e-05 Query::execute this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000103951 Query::enterState: initializing this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000149012 Query::enterState: parsing this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [9625e] {queries} 0.00019002 Query::prepare this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000256062 Query::enterState: optimizing ast this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.00030303 Query::enterState: loading collections this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000349998 Query::enterState: instantiating plan this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000397921 Query::enterState: optimizing plan this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.000550985 Query::enterState: executing this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#357] starting statemachine of executor type=ReturnNode this=140565415037920 id=3
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#357] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#357] starting statemachine of executor type=EnumerateCollectionNode this=140565404751872 id=2
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#357] type=EnumerateCollectionNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [007ac] {queries} [query#357] starting statemachine of executor type=SingletonNode this=140565415029456 id=1
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [488de] {queries} [query#357] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#357] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#357] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#357] type=SingletonNode this=140565415029456 id=1 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=EnumerateCollectionNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=EnumerateCollectionNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#357] type=EnumerateCollectionNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#357] type=EnumerateCollectionNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#357] type=EnumerateCollectionNode this=140565404751872 id=2 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [cfe46] {queries} [query#357] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [1f786] {queries} [query#357] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:19Z [69906] DEBUG [96e2c] {queries} [query#357] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:19Z [69906] DEBUG [fa327] {queries} [query#357] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:19Z [69906] DEBUG [80c24] {queries} [query#357] type=ReturnNode this=140565415037920 id=3 local statemachine done. Return now.
+2020-04-12T15:06:19Z [69906] DEBUG [fc22c] {queries} 0.00160098 Query::finalize: before _trx->commit this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [7ef18] {queries} 0.00163913 Query::finalize: before cleanupPlanAndEngine this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [d8767] {queries} 0.00167203 Query::enterState: finalizing this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [95996] {queries} 0.00173092 Query::finalize:returning this: 140732659331712
+2020-04-12T15:06:19Z [69906] DEBUG [f5cee] {queries} 0.00177097 Query::~Query this: 140732659331712
+2020-04-12T15:06:19Z [69906] INFO [cf3f4] ArangoDB (version 3.7.0-devel enterprise [darwin]) is ready for business. Have fun!
+2020-04-12T15:06:23Z [69906] INFO [22a70] {queries} 8.10623e-06 Query::Query queryString: FOR x IN 1..10 RETURN x this: 123145611831936
+2020-04-12T15:06:23Z [69906] INFO [8c9fc] {queries} bindParameters: {}
+2020-04-12T15:06:23Z [69906] INFO [8979d] {queries} options: {"profile":4,"count":false}
+2020-04-12T15:06:23Z [69906] DEBUG [6cac7] {queries} 0.000245094 Query::executeV8 this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000317097 Query::enterState: initializing this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000396013 Query::enterState: parsing this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [9625e] {queries} 0.000463009 Query::prepare this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000576973 Query::enterState: optimizing ast this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000658035 Query::enterState: loading collections this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000739098 Query::enterState: instantiating plan this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.000827074 Query::enterState: optimizing plan this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.00104308 Query::enterState: executing this: 123145611831936
+2020-04-12T15:06:23Z [69906] INFO [1e717] {queries} [query#359] execute type=ReturnNode callStack= [ {specific: [ { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false } ]} ] this=140565385082704 id=4
+2020-04-12T15:06:23Z [69906] DEBUG [007ac] {queries} [query#359] starting statemachine of executor type=ReturnNode this=140565385082704 id=4
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [488de] {queries} [query#359] type=ReturnNode request dependency { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] INFO [1e717] {queries} [query#359] execute type=EnumerateListNode callStack= [ {specific: [ { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false } ]} ] this=140565385075712 id=3
+2020-04-12T15:06:23Z [69906] DEBUG [007ac] {queries} [query#359] starting statemachine of executor type=EnumerateListNode this=140565385075712 id=3
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=EnumerateListNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=EnumerateListNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [488de] {queries} [query#359] type=EnumerateListNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] INFO [1e717] {queries} [query#359] execute type=CalculationNode callStack= [ {specific: [ { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false } ]} ] this=140565396399104 id=2
+2020-04-12T15:06:23Z [69906] DEBUG [007ac] {queries} [query#359] starting statemachine of executor type=CalculationNode this=140565396399104 id=2
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [488de] {queries} [query#359] type=CalculationNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] INFO [1e717] {queries} [query#359] execute type=SingletonNode callStack= [ {specific: [ { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false } ]} ] this=140565385089504 id=1
+2020-04-12T15:06:23Z [69906] DEBUG [007ac] {queries} [query#359] starting statemachine of executor type=SingletonNode this=140565385089504 id=1
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [488de] {queries} [query#359] type=SingletonNode request dependency { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=SingletonNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=SingletonNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [96e2c] {queries} [query#359] type=SingletonNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:23Z [69906] DEBUG [fa327] {queries} [query#359] type=SingletonNode bypass unused rows.
+2020-04-12T15:06:23Z [69906] DEBUG [80c24] {queries} [query#359] type=SingletonNode this=140565385089504 id=1 local statemachine done. Return now.
+2020-04-12T15:06:23Z [69906] INFO [60bbc] {queries} [query#359] execute done type=SingletonNode this=140565385089504 id=1 state=DONE skipped=0 produced=1 shadowRows=0
+2020-04-12T15:06:23Z [69906] INFO [f12f9] {queries} [query#359] execute type=SingletonNode result: {"nrItems":1,"nrRegs":1,"matrix":[[null,"(non-representable type none)"]]}
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=CalculationNode determine next action on call { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=CalculationNode call produceRows { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [96e2c] {queries} [query#359] type=CalculationNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:23Z [69906] DEBUG [fa327] {queries} [query#359] type=CalculationNode bypass unused rows.
+2020-04-12T15:06:23Z [69906] DEBUG [80c24] {queries} [query#359] type=CalculationNode this=140565396399104 id=2 local statemachine done. Return now.
+2020-04-12T15:06:23Z [69906] INFO [60bbc] {queries} [query#359] execute done type=CalculationNode this=140565396399104 id=2 state=DONE skipped=0 produced=1 shadowRows=0
+2020-04-12T15:06:23Z [69906] INFO [f12f9] {queries} [query#359] execute type=CalculationNode result: {"nrItems":1,"nrRegs":1,"matrix":[[null,[1,2,3,4,5,6,7,8,9,10]]]}
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=EnumerateListNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=EnumerateListNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [96e2c] {queries} [query#359] type=EnumerateListNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:23Z [69906] DEBUG [fa327] {queries} [query#359] type=EnumerateListNode bypass unused rows.
+2020-04-12T15:06:23Z [69906] DEBUG [80c24] {queries} [query#359] type=EnumerateListNode this=140565385075712 id=3 local statemachine done. Return now.
+2020-04-12T15:06:23Z [69906] INFO [60bbc] {queries} [query#359] execute done type=EnumerateListNode this=140565385075712 id=3 state=DONE skipped=0 produced=10 shadowRows=0
+2020-04-12T15:06:23Z [69906] INFO [f12f9] {queries} [query#359] execute type=EnumerateListNode result: {"nrItems":10,"nrRegs":2,"matrix":[[null,"(non-representable type none)",1],[null,"(non-representable type none)",2],[null,"(non-representable type none)",3],[null,"(non-representable type none)",4],[null,"(non-representable type none)",5],[null,"(non-representable type none)",6],[null,"(non-representable type none)",7],[null,"(non-representable type none)",8],[null,"(non-representable type none)",9],[null,"(non-representable type none)",10]]}
+2020-04-12T15:06:23Z [69906] DEBUG [cfe46] {queries} [query#359] type=ReturnNode determine next action on call { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [1f786] {queries} [query#359] type=ReturnNode call produceRows { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false }
+2020-04-12T15:06:23Z [69906] DEBUG [96e2c] {queries} [query#359] type=ReturnNode all produced, fast forward to end up (sub-)query.
+2020-04-12T15:06:23Z [69906] DEBUG [fa327] {queries} [query#359] type=ReturnNode bypass unused rows.
+2020-04-12T15:06:23Z [69906] DEBUG [80c24] {queries} [query#359] type=ReturnNode this=140565385082704 id=4 local statemachine done. Return now.
+2020-04-12T15:06:23Z [69906] INFO [60bbc] {queries} [query#359] execute done type=ReturnNode this=140565385082704 id=4 state=DONE skipped=0 produced=10 shadowRows=0
+2020-04-12T15:06:23Z [69906] INFO [f12f9] {queries} [query#359] execute type=ReturnNode result: {"nrItems":10,"nrRegs":2,"matrix":[[null,"(non-representable type none)",1],[null,"(non-representable type none)",2],[null,"(non-representable type none)",3],[null,"(non-representable type none)",4],[null,"(non-representable type none)",5],[null,"(non-representable type none)",6],[null,"(non-representable type none)",7],[null,"(non-representable type none)",8],[null,"(non-representable type none)",9],[null,"(non-representable type none)",10]]}
+2020-04-12T15:06:23Z [69906] DEBUG [fc22c] {queries} 0.00405312 Query::finalize: before _trx->commit this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [7ef18] {queries} 0.00412011 Query::finalize: before cleanupPlanAndEngine this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [d8767] {queries} 0.00417995 Query::enterState: finalizing this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [95996] {queries} 0.00431609 Query::finalize:returning this: 123145611831936
+2020-04-12T15:06:23Z [69906] INFO [36a75] {queries} 0.00453615 Query::~Query queryString:  this: 123145611831936
+2020-04-12T15:06:23Z [69906] DEBUG [f5cee] {queries} 0.00460315 Query::~Query this: 123145611831936
+2020-04-12T15:06:25Z [69906] DEBUG [8ed81] {queries} AQL feature stopped
+2020-04-12T15:06:26Z [69906] INFO [4bcb9] ArangoDB has been shut down

@@ -1,0 +1,34 @@
+2020-04-12T15:04:31Z [69902] INFO [e52b0] ArangoDB 3.7.0-devel enterprise [darwin] 64bit maintainer mode, using build heads/bug-fix/traversal-estimates-0-g71aab81a93, VPack 0.1.33, RocksDB 6.8.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1d  10 Sep 2019
+2020-04-12T15:04:31Z [69902] WARNING [0458b] This is a maintainer version intended for debugging. DO NOT USE IN PRODUCTION!
+2020-04-12T15:04:31Z [69902] WARNING [bd666] ==============================================================================
+2020-04-12T15:04:31Z [69902] INFO [144fe] using storage engine 'rocksdb'
+2020-04-12T15:04:31Z [69902] INFO [43396] {authentication} Jwt secret not specified, generating...
+2020-04-12T15:04:31Z [69902] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2020-04-12T15:04:31Z [69902] INFO [6ea38] using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2020-04-12T15:04:31Z [69902] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is unlimited, soft limit is 8192
+2020-04-12T15:04:31Z [69902] INFO [3844e] {authentication} Authentication is turned on (system only), authentication for unix sockets is turned on
+2020-04-12T15:04:31Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '7', rebuilding
+2020-04-12T15:04:31Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '13', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '19', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '22', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '28', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '37', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '40', rebuilding
+2020-04-12T15:04:32Z [69902] WARNING [ecdbc] {engines} no revision tree found for collection with id '43', rebuilding
+2020-04-12T15:04:32Z [69902] INFO [65273] {backup} Checking if old data from before a restore operation needs to be deleted in the background, scheduling...
+2020-04-12T15:04:32Z [69902] INFO [fdedb] {backup} Checking if pre restore data needs to be deleted...
+2020-04-12T15:04:32Z [69902] INFO [365ec] You are using a milestone/alpha/beta/preview version ('3.7.0-devel') of ArangoDB
+2020-04-12T15:04:32Z [69902] INFO [cf3f4] ArangoDB (version 3.7.0-devel enterprise [darwin]) is ready for business. Have fun!
+2020-04-12T15:04:43Z [69902] INFO [22a70] {queries} 1.00136e-05 Query::Query queryString: FOR x IN 1..10 RETURN x this: 123145668659840
+2020-04-12T15:04:43Z [69902] INFO [8c9fc] {queries} bindParameters: {}
+2020-04-12T15:04:43Z [69902] INFO [8979d] {queries} options: {"profile":3,"count":false}
+2020-04-12T15:04:43Z [69902] INFO [1e717] {queries} [query#175] execute type=ReturnNode callStack= [ {specific: [ { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false } ]} ] this=140580492454384 id=4
+2020-04-12T15:04:43Z [69902] INFO [1e717] {queries} [query#175] execute type=EnumerateListNode callStack= [ {specific: [ { skip: 0, softLimit: 1000, hardLimit: unlimited, fullCount: false } ]} ] this=140580492452784 id=3
+2020-04-12T15:04:43Z [69902] INFO [1e717] {queries} [query#175] execute type=CalculationNode callStack= [ {specific: [ { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false } ]} ] this=140580520795136 id=2
+2020-04-12T15:04:43Z [69902] INFO [1e717] {queries} [query#175] execute type=SingletonNode callStack= [ {specific: [ { skip: 0, softLimit: unlimited, hardLimit: unlimited, fullCount: false } ]} ] this=140580492450368 id=1
+2020-04-12T15:04:43Z [69902] INFO [60bbc] {queries} [query#175] execute done type=SingletonNode this=140580492450368 id=1 state=DONE skipped=0 produced=1 shadowRows=0
+2020-04-12T15:04:43Z [69902] INFO [60bbc] {queries} [query#175] execute done type=CalculationNode this=140580520795136 id=2 state=DONE skipped=0 produced=1 shadowRows=0
+2020-04-12T15:04:43Z [69902] INFO [60bbc] {queries} [query#175] execute done type=EnumerateListNode this=140580492452784 id=3 state=DONE skipped=0 produced=10 shadowRows=0
+2020-04-12T15:04:43Z [69902] INFO [60bbc] {queries} [query#175] execute done type=ReturnNode this=140580492454384 id=4 state=DONE skipped=0 produced=10 shadowRows=0
+2020-04-12T15:04:43Z [69902] INFO [36a75] {queries} 0.00423288 Query::~Query queryString:  this: 123145668659840
+2020-04-12T15:04:47Z [69902] INFO [4bcb9] ArangoDB has been shut down

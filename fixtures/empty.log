@@ -1,0 +1,17 @@
+2020-04-12T15:03:38Z [69900] INFO [e52b0] ArangoDB 3.7.0-devel enterprise [darwin] 64bit maintainer mode, using build heads/bug-fix/traversal-estimates-0-g71aab81a93, VPack 0.1.33, RocksDB 6.8.0, ICU 64.2, V8 7.9.317, OpenSSL 1.1.1d  10 Sep 2019
+2020-04-12T15:03:38Z [69900] WARNING [0458b] This is a maintainer version intended for debugging. DO NOT USE IN PRODUCTION!
+2020-04-12T15:03:38Z [69900] WARNING [bd666] ==============================================================================
+2020-04-12T15:03:38Z [69900] INFO [144fe] using storage engine 'rocksdb'
+2020-04-12T15:03:38Z [69900] INFO [43396] {authentication} Jwt secret not specified, generating...
+2020-04-12T15:03:38Z [69900] INFO [3bb7d] {cluster} Starting up with role SINGLE
+2020-04-12T15:03:38Z [69900] INFO [6ea38] using endpoint 'http+tcp://0.0.0.0:8529' for non-encrypted requests
+2020-04-12T15:03:38Z [69900] INFO [a1c60] {syscall} file-descriptors (nofiles) hard limit is unlimited, soft limit is 8192
+2020-04-12T15:03:38Z [69900] INFO [24783] created database directory 'testDB'
+2020-04-12T15:03:38Z [69900] INFO [3844e] {authentication} Authentication is turned on (system only), authentication for unix sockets is turned on
+2020-04-12T15:03:38Z [69900] INFO [65273] {backup} Checking if old data from before a restore operation needs to be deleted in the background, scheduling...
+2020-04-12T15:03:38Z [69900] INFO [fdedb] {backup} Checking if pre restore data needs to be deleted...
+2020-04-12T15:03:38Z [69900] INFO [365ec] You are using a milestone/alpha/beta/preview version ('3.7.0-devel') of ArangoDB
+2020-04-12T15:03:39Z [69900] INFO [857d7] {authentication} Creating user "root"
+2020-04-12T15:03:39Z [69900] INFO [cf3f4] ArangoDB (version 3.7.0-devel enterprise [darwin]) is ready for business. Have fun!
+2020-04-12T15:04:10Z [69900] ERROR [1038e] {engines} min tick is smaller than safe delete tick (minSeqNr: 75) < (lastSync = 87)
+2020-04-12T15:04:18Z [69900] INFO [4bcb9] ArangoDB has been shut down
