@@ -1,8 +1,6 @@
 import 'mocha';
 
 import {expect} from 'chai';
-import {isExportDeclaration} from 'typescript';
-
 import {analyzeLog} from '../src/logAnalyzer';
 import {Query} from '../src/query';
 
