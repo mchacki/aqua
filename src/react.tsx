@@ -1,11 +1,18 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { NavMenu } from './ui/navigation';
 
-// import "../node_modules/bootstrap/scss/bootstrap.scss";
 import '../style/App.scss';
+import { AnalysisProvider } from './ui/analysis';
+import { QueryList } from './ui/query';
 
 const Index = () => {
-    return <div>Hello React!</div>;
+    return <>
+        <AnalysisProvider>
+            <NavMenu />
+            <QueryList />
+        </AnalysisProvider>
+    </>;
 };
 
 ReactDOM.render(<Index />, document.getElementById('app'));

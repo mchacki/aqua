@@ -21,20 +21,16 @@ module.exports = [
       rules: [
         {test: /\.ts(x?)$/, include: /src/, use: [{loader: 'ts-loader'}]}, {
           test: /\.s[ac]ss$/i,
-          /*include: [path.join(nodeModules, 'bootstrap'), /style/],*/
           use: [
-            // Creates `style` nodes from JS strings
-            'style-loader',
-            // Translates CSS into CommonJS
-            {loader: 'css-loader', options: {importLoaders: 1}},
-
-            // Compiles Sass to CSS
-            'sass-loader',
+            'style-loader', {loader: 'css-loader', options: {importLoaders: 1}},
+            'sass-loader'
           ],
         }
       ]
     },
     output: {path: __dirname + '/dist', filename: 'queryAnalyzer.js'},
-    plugins: [new HtmlWebpackPlugin({template: './src/index.html'})]
+    plugins: [new HtmlWebpackPlugin({template: './src/index.html'})],
+    watch: true,
+    resolve: {extensions: ['.js', '.ts', '.tsx']},
   }
 ];

@@ -2,6 +2,7 @@
 import {createReadStream} from 'fs';
 import {createInterface} from 'readline';
 import {Query} from '../query';
+import {QueryMap} from './types';
 
 const removeBraces = (input: string): string =>
     input.substring(1, input.length - 1);
@@ -32,7 +33,7 @@ class LineData {
   }
 }
 
-export const analyzeLog = async(log: string): Promise<Map<string, Query>> => {
+export const analyzeLog = async(log: string): Promise<QueryMap> => {
   const result = new Map();
 
   const readInterface = createInterface(createReadStream(log));
