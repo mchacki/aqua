@@ -7,7 +7,12 @@ export class Query {
     this._events = [];
   }
 
-  public events = (): Event[] => {
-    return this._events;
+  public events = ():
+      Event[] => {
+        return this._events;
+      }
+
+  public addEvent = (e: Event) => {
+    this._events.push(e);
   }
 }
