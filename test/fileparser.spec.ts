@@ -24,6 +24,8 @@ describe('Read from file', () => {
   });
 
   describe('Single query found', () => {
+    // Adapt this when modifing the fixture
+    const queryId = '175';
     const file = fixturePath('singleQuery.log');
     let queries: Map<string, Query>;
 
@@ -36,8 +38,27 @@ describe('Read from file', () => {
     });
 
     it('should find the logged query', () => {
-      expect(queries, stringifyMap(queries)).to.have.key('175');
-    })
+      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+    });
+
+    it('should find all events', () => {
+      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+      const query = queries.get(queryId);
+      expect(query.events()).to.be.of.length(8);
+    });
+
+    it('all events need increasing ticks', () => {
+      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+      const query = queries.get(queryId);
+      const events = query.events();
+      expect(events).to.not.be.empty;
+      let lastTick = events[0].tick;
+      for (let i = 1; i < events.length; ++i) {
+        const {tick} = events[i];
+        expect(tick).to.be.greaterThan(lastTick);
+        lastTick = tick;
+      }
+    });
   });
 
   describe('Multiple queries found', () => {

@@ -51,7 +51,7 @@ describe('Query object', () => {
       testee.addEvent(reqEvt);
 
 
-      const resEvt = new ResponseEvent('ReturnNode', 1, 0, 0, 0);
+      const resEvt = new ResponseEvent('ReturnNode', 1, 'DONE', 0, 0, 0);
       testee.addEvent(resEvt);
 
       const events = testee.events();
@@ -69,11 +69,11 @@ describe('Query object', () => {
       const reqevt3 = new RequestEvent('SingletonNode', 3, createTestStack());
       testee.addEvent(reqevt3);
 
-      const resevt3 = new ResponseEvent('SingletonNode', 3, 0, 0, 0);
+      const resevt3 = new ResponseEvent('SingletonNode', 3, 'DONE', 0, 0, 0);
       testee.addEvent(resevt3);
-      const resevt2 = new ResponseEvent('FilterNode', 2, 0, 0, 0);
+      const resevt2 = new ResponseEvent('FilterNode', 2, 'DONE', 0, 0, 0);
       testee.addEvent(resevt2);
-      const resevt1 = new ResponseEvent('ReturnNode', 1, 0, 0, 0);
+      const resevt1 = new ResponseEvent('ReturnNode', 1, 'DONE', 0, 0, 0);
       testee.addEvent(resevt1);
 
 
