@@ -13,7 +13,6 @@ export const NavMenu = () => {
 
     const onChange = () => {
         const { path } = inputFile.current.files[0];
-        console.log("Loading:", path);
         dispatch(loadFile(path));
     }
 
