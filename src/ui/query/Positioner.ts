@@ -1,3 +1,5 @@
+import {EventType} from '../../query';
+
 const defaultHeight = 50;
 const execNodeWidth = 150;
 const eventWidth = 10;
@@ -31,6 +33,33 @@ export class Positioner {
     // position 0 is top, but nodeIndex 0 is bottom
     const inverseNum = this._numNodes - nodeIndex;
     return inverseNum * (paddingVertical + defaultHeight)
+  }
+
+  private getXPosition(eventIndex: number) {
+    return 10 + execNodeWidth + (eventIndex + 1) * eventWidth;
+  }
+
+  private alignToTopNode(y: number): number {
+    return y + (defaultHeight / 2);
+  }
+
+  private alignToBottomNode(y: number): number {
+    return this.alignToTopNode(y) + defaultHeight + paddingVertical;
+  }
+
+  private startToPoints(x: number, y: number, type: EventType) {
+    if (type === EventType.REQUEST) {
+      return [x, this.alignToBottomNode(y), x, this.alignToTopNode(y)];
+    }
+    return [x, this.alignToTopNode(y), x, this.alignToBottomNode(y)];
+  }
+
+  eventPosition(eventIndex: number, nodeIndex: number, type: EventType) {
+    const y = this.getYPosition(nodeIndex);
+    const x = this.getXPosition(eventIndex);
+
+    const points = this.startToPoints(x, y, type);
+    return {points};
   }
 
   execNodePosition(nodeIndex: number): PositionType {
