@@ -31,10 +31,27 @@ export const QueryDetail = ({ id }: input) => {
         setLeftBorder(leftBorder + shiftPerClick);
         setRightBorder(rightBorder + shiftPerClick);
     };
+    const goToFirst = () => {
+        setLeftBorder(0);
+        setRightBorder(100);
+    };
+
+    const goToLast = () => {
+        if (numEvents % 50 === 0) {
+            setLeftBorder(numEvents);
+            setRightBorder(numEvents + 50);
+        } else {
+            setLeftBorder(Math.floor(numEvents / 50) * 50);
+            setRightBorder(Math.ceil(numEvents / 50) * 50);
+        }
+    };
     return (
         <>
             <div>
-                <button disabled={leftBorder === 0} onClick={() => shiftLeft()}>{"<<<"}</button><button disabled={rightBorder >= numEvents} title=">>>" onClick={() => shiftRight()}>{">>>"}</button>
+                <button disabled={leftBorder === 0} onClick={() => goToFirst()}>{"First"}</button>
+                <button disabled={leftBorder === 0} onClick={() => shiftLeft()}>{"<<<"}</button>
+                <button disabled={rightBorder >= numEvents} onClick={() => shiftRight()}>{">>>"}</button>
+                <button disabled={rightBorder >= numEvents} onClick={() => goToLast()}>{"Last"}</button>
             </div>
             <TooltipContext.Consumer>
                 {value =>
