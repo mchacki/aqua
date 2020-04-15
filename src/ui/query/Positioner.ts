@@ -1,15 +1,22 @@
 import {EventType} from '../../query';
 
-const defaultHeight = 50;
+const defaultHeight = 20;
 const execNodeWidth = 150;
 const eventWidth = 10;
 const paddingVertical = 10;
+
+/*
+const defaultHeight = 20;
+const execNodeWidth = 50;
+const eventWidth = 2;
+const paddingVertical = 2;
+*/
 
 type PositionType = {
   x: number,
   y: number,
   height: number,
-  width: number,
+  width: number
 };
 
 
@@ -52,6 +59,17 @@ export class Positioner {
       return [x, this.alignToBottomNode(y), x, this.alignToTopNode(y)];
     }
     return [x, this.alignToTopNode(y), x, this.alignToBottomNode(y)];
+  }
+
+  requiredHeight(): number {
+    return (this._numNodes + 1) * (defaultHeight + paddingVertical);
+  }
+
+  requiredWidth(): number {
+    if (this._numEvents > 100) {
+      return 10 + execNodeWidth + 101 * eventWidth;
+    }
+    return 10 + execNodeWidth + (this._numEvents + 1) * eventWidth;
   }
 
   eventPosition(eventIndex: number, nodeIndex: number, type: EventType) {
