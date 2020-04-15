@@ -1,6 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const nodeModules = path.resolve(path.join(__dirname, 'node_modules'));
+
+const ElectronReloadPlugin = require('webpack-electron-reload')({
+  path: path.join(__dirname, './dist/electron.js'),
+});
+
 
 module.exports = [
   {
@@ -10,7 +14,8 @@ module.exports = [
     module: {
       rules: [{test: /\.ts$/, include: /src/, use: [{loader: 'ts-loader'}]}]
     },
-    output: {path: __dirname + '/dist', filename: 'electron.js'}
+    output: {path: __dirname + '/dist', filename: 'electron.js'},
+    plugins: [ElectronReloadPlugin()]
   },
   {
     mode: 'development',
