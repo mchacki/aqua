@@ -5,13 +5,17 @@ import { NavMenu } from './ui/navigation';
 import '../style/App.scss';
 import { AnalysisProvider } from './ui/analysis';
 import { QueryList } from './ui/query';
+import { TooltipProvider, Tooltip } from './ui/tooltip';
 
 const Index = () => {
     return <>
-        <AnalysisProvider>
-            <NavMenu />
-            <QueryList />
-        </AnalysisProvider>
+        <TooltipProvider>
+            <AnalysisProvider>
+                <NavMenu />
+                <QueryList />
+            </AnalysisProvider>
+            <Tooltip></Tooltip>
+        </TooltipProvider>
     </>;
 };
 

@@ -4,6 +4,7 @@ import { Stage, Layer } from 'react-konva'
 import { ExecNode } from './ExecNode'
 import { EventArrow } from './EventArrow'
 import { Positioner } from './Positioner'
+import { TooltipContext } from '../tooltip'
 
 
 
@@ -35,13 +36,19 @@ export const QueryDetail = ({ id }: input) => {
             <div>
                 <button disabled={leftBorder === 0} onClick={() => shiftLeft()}>{"<<<"}</button><button disabled={rightBorder >= numEvents} title=">>>" onClick={() => shiftRight()}>{">>>"}</button>
             </div>
-            <Stage width={positioner.requiredWidth()} height={positioner.requiredHeight()}>
-                <Layer>
-                    {nodes.map((node, nodeIndex) => (<ExecNode key={`${node.id}:${node.type}`} node={node} nodeIndex={nodeIndex} positioner={positioner}></ExecNode>))}
-                    {query.events().filter((e, index) => leftBorder <= index && index <= rightBorder)
-                        .map((event, eventIndex) => (<EventArrow key={event.tick} event={event} eventIndex={eventIndex} positioner={positioner} nodeIndex={nodes.findIndex(n => n.id === event.nodeId)}></EventArrow>))}
-                </Layer>
-            </Stage>
+            <TooltipContext.Consumer>
+                {value =>
+                    <Stage width={positioner.requiredWidth()} height={positioner.requiredHeight()}>
+                        <TooltipContext.Provider value={value}>
+                            <Layer>
+                                {nodes.map((node, nodeIndex) => (<ExecNode key={`${node.id}:${node.type}`} node={node} nodeIndex={nodeIndex} positioner={positioner}></ExecNode>))}
+                                {query.events().filter((e, index) => leftBorder <= index && index <= rightBorder)
+                                    .map((event, eventIndex) => (<EventArrow key={event.tick} event={event} eventIndex={eventIndex} positioner={positioner} nodeIndex={nodes.findIndex(n => n.id === event.nodeId)}></EventArrow>))}
+                            </Layer>
+                        </TooltipContext.Provider>
+                    </Stage>
+                }
+            </TooltipContext.Consumer>
         </>
     );
 }
