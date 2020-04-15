@@ -68,8 +68,13 @@ const dataToEvent = (data: string): Event|undefined => {
       */
       const nodeType = splitted[1].split('=')[1];
       const id = parseInt(splitted[splitted.length - 1].split('=')[1]);
-      // TODO
-      const callStack = new CallStack();
+      // We need to have indexes 3 -> splitted.length -2 so filter all others
+      // out and join...
+      // No need to include whitespaces, we are in json.
+      const joined =
+          splitted.filter((e, i) => 3 <= i && i < splitted.length - 2).join('');
+
+      const callStack = new CallStack(joined);
       return new RequestEvent(nodeType, id, callStack);
     }
   }

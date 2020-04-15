@@ -20,10 +20,10 @@ export const EventArrow = ({ eventIndex, positioner, event, nodeIndex }: input) 
 
     const printInfo = (): string => {
         if (event instanceof RequestEvent) {
-            return `{offset: 0, softLimit: 1000, hardLimit: inf, fullCount: false}`;
+            return event.stack.toString();
 
         } else if (event instanceof ResponseEvent) {
-            return `skip: ${event.skipped} data: ${event.produced} shadows: ${event.shadowRows}`;
+            return `state: ${event.state} skip: ${event.skipped} data: ${event.produced} shadows: ${event.shadowRows}`;
 
         }
     }
