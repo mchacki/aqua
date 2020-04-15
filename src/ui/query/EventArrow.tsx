@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { Arrow, Text } from 'react-konva'
+import React from 'react'
+import { Arrow } from 'react-konva'
 import { Positioner } from './Positioner';
-import { Event, RequestEvent, ResponseEvent } from '../../query'
+import { Event } from '../../query'
 import { useTooltip, setTooltip, hideTooltip } from '../tooltip';
+import { EventTooltip } from './EventTooltip';
 
 type input = {
     eventIndex: number,
@@ -17,24 +18,11 @@ export const EventArrow = ({ eventIndex, positioner, event, nodeIndex }: input) 
     const color = "black";
 
 
-
-    const printInfo = (): string => {
-        if (event instanceof RequestEvent) {
-            return event.stack.toString();
-
-        } else if (event instanceof ResponseEvent) {
-            return `state: ${event.state} skip: ${event.skipped} data: ${event.produced} shadows: ${event.shadowRows}`;
-
-        }
-    }
-
     const [, dispatch] = useTooltip();
 
-    const displayText = (event: MouseEvent, toggle: boolean): void => {
-        console.log("Enter!", toggle);
+    const displayText = (evt: MouseEvent, toggle: boolean): void => {
         if (toggle) {
-
-            dispatch(setTooltip({ top: event.y + 10, left: event.x + 10, content: printInfo() }));
+            dispatch(setTooltip({ top: evt.y + 10, left: evt.x + 10, content: () => <EventTooltip event={event}></EventTooltip> }));
         } else {
             dispatch(hideTooltip());
         }

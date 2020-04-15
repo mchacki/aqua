@@ -6,14 +6,14 @@ export enum ActionTypes {
 }
 
 export type State = {
-    content: string,
+    content: React.FC,
     visible: boolean,
     top: number,
     left: number
 }
 
 export type TooltipInfos = {
-    content: string,
+    content: React.FC,
     top: number,
     left: number
 }

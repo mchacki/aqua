@@ -7,7 +7,7 @@ export const Tooltip = () => {
     if (visible) {
         return (
             <div style={{ position: "absolute", top, left, background: 'white', zIndex: 1000 }}>
-                {content}
+                {content({})}
             </div>
         );
     }

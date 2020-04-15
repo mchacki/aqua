@@ -46,9 +46,19 @@ hardLimit: unlimited, fullCount: false } ]} ] this=140580492454384 id=4
 */
 export class RequestEvent extends BaseEvent {
   readonly stack: CallStack;
+  private response?: ResponseEvent;
+
   constructor(nodeType: string, nodeId: number, callStack: CallStack) {
     super(EventType.REQUEST, nodeType, nodeId);
     this.stack = callStack;
+  }
+
+  setResponse(evt: ResponseEvent) {
+    this.response = evt;
+  }
+
+  getResponse(): ResponseEvent|undefined {
+    return this.response;
   }
 }
 
@@ -62,6 +72,8 @@ export class ResponseEvent extends BaseEvent {
   readonly produced: number;
   readonly shadowRows: number;
 
+  private request?: RequestEvent;
+
   constructor(
       nodeType: string, nodeId: number, state: string, skipped: number,
       produced: number, shadowRows: number) {
@@ -70,5 +82,13 @@ export class ResponseEvent extends BaseEvent {
     this.skipped = skipped;
     this.produced = produced;
     this.shadowRows = shadowRows;
+  }
+
+  setRequest(evt: RequestEvent) {
+    this.request = evt;
+  }
+
+  getRequest(): RequestEvent|undefined {
+    return this.request;
   }
 }
