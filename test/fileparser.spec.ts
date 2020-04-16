@@ -6,9 +6,6 @@ import {Query} from '../src/query';
 
 import fixturePath from './fixturePath';
 
-const stringifyMap = (map: Map<string, Query>): string =>
-    JSON.stringify(Array.from(map.entries()));
-
 describe('Read from file', () => {
   describe('No query found', () => {
     const file = fixturePath('empty.log');
@@ -19,7 +16,7 @@ describe('Read from file', () => {
     });
 
     it('should return an empty map', () => {
-      expect(queries, stringifyMap(queries)).to.be.empty;
+      expect(queries).to.be.empty;
     });
   });
 
@@ -34,21 +31,21 @@ describe('Read from file', () => {
     });
 
     it('should not return an empty map', () => {
-      expect(queries, stringifyMap(queries)).to.not.be.empty;
+      expect(queries).to.not.be.empty;
     });
 
     it('should find the logged query', () => {
-      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+      expect(queries).to.have.key(queryId);
     });
 
     it('should find all events', () => {
-      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+      expect(queries).to.have.key(queryId);
       const query = queries.get(queryId);
       expect(query.events()).to.be.of.length(8);
     });
 
     it('all events need increasing ticks', () => {
-      expect(queries, stringifyMap(queries)).to.have.key(queryId);
+      expect(queries).to.have.key(queryId);
       const query = queries.get(queryId);
       const events = query.events();
       expect(events).to.not.be.empty;
@@ -70,11 +67,11 @@ describe('Read from file', () => {
     });
 
     it('should not return an empty map', () => {
-      expect(queries, stringifyMap(queries)).to.not.be.empty;
+      expect(queries).to.not.be.empty;
     });
 
     it('should find the logged queries', () => {
-      expect(queries, stringifyMap(queries)).to.have.keys('219', '221', '223');
+      expect(queries).to.have.keys('219', '221', '223');
     })
   });
 });

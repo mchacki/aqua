@@ -6,7 +6,9 @@ import {CallStack, Query, RequestEvent, ResponseEvent} from '../src/query';
 
 const createTestStack =
     () => {
-      return new CallStack();
+      const fakedStack =
+          `[{specific: [{skip:0, softLimit: 1000, hardLimit: unlimited, fullCount: false}]}]`;
+      return new CallStack(fakedStack);
     }
 
 describe('Query object', () => {

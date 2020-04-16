@@ -63,7 +63,7 @@ export class CallStack {
       const parsed = JSON.parse(addQuotesForProperties) as Array<Object>;
       this.stack = parsed.map(entryToCallList);
     } catch (e) {
-      alert(`Failed to parse file ${e.toString()}`);
+      console.log(`Failed to parse file ${e.toString()}`);
     }
   }
 }
