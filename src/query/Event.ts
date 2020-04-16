@@ -2,7 +2,8 @@ import {CallStack} from './CallStack';
 
 export enum EventType {
   REQUEST,
-  RESPONSE
+  RESPONSE,
+  RESULT
 }
 
 // generate infinitly many ticks
@@ -73,6 +74,7 @@ export class ResponseEvent extends BaseEvent {
   readonly shadowRows: number;
 
   private request?: RequestEvent;
+  private result?: ResultEvent;
 
   constructor(
       nodeType: string, nodeId: number, state: string, skipped: number,
@@ -91,4 +93,32 @@ export class ResponseEvent extends BaseEvent {
   getRequest(): RequestEvent|undefined {
     return this.request;
   }
+
+  setResult(evt: ResultEvent) {
+    this.result = evt;
+  }
+
+  getResult(): ResultEvent|undefined {
+    return this.result;
+  }
 }
+
+type DataType = {
+  nodeType: string
+  nrItems: number,
+  nrRegs: number,
+  matrix: Array<Array<any>>
+}
+
+export class ResultEvent extends BaseEvent {
+    readonly nrItems: number;
+    readonly nrRegs: number;
+    readonly matrix: Array<Array<any>>;
+
+    constructor(nodeType: string, {nrItems, nrRegs, matrix}: DataType) {
+      super(EventType.RESULT, nodeType, 0);
+      this.nrItems = nrItems;
+      this.nrRegs = nrRegs;
+      this.matrix = matrix;
+    }
+  }

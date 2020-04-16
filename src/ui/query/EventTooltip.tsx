@@ -7,19 +7,37 @@ type input = {
     event: Event
 }
 
-export const EventTooltip = ({ event }: input) => {
+const hasPartner = (event: Event): boolean => {
     if (event instanceof RequestEvent) {
-        const resp = event.getResponse();
-        if (resp) {
-            return <RequestResponsePair request={event} response={resp}></RequestResponsePair>
-        }
-        return <RequestDataEvent event={event}></RequestDataEvent>;
-    } else if (event instanceof ResponseEvent) {
-        const req = event.getRequest();
-        if (req) {
-            return <RequestResponsePair request={req} response={event}></RequestResponsePair>
-        }
-        return <ResponseDataEvent event={event}></ResponseDataEvent>;
+        return event.getResponse() !== undefined;
     }
+    if (event instanceof ResponseEvent) {
+        return event.getRequest() !== undefined;
+    }
+    return false;
+}
+
+const makePair = (event: Event): [RequestEvent, ResponseEvent] => {
+    if (event instanceof RequestEvent) {
+        return [event, event.getResponse()];
+    } else if (event instanceof ResponseEvent) {
+        return [event.getRequest(), event];
+    }
+    throw "unreachable";
+}
+
+export const EventTooltip = ({ event }: input) => {
+    if (hasPartner(event)) {
+        const [request, response] = makePair(event);
+
+        return <RequestResponsePair request={request} response={response} result={response.getResult()}></RequestResponsePair>
+    } else {
+        if (event instanceof RequestEvent) {
+            return <RequestDataEvent event={event}></RequestDataEvent>;
+        } else if (event instanceof ResponseEvent) {
+            return <ResponseDataEvent event={event}></ResponseDataEvent>;
+        }
+    }
+
     return <></>;
 }

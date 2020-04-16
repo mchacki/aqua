@@ -2,7 +2,7 @@
 import {createReadStream} from 'fs';
 import {createInterface} from 'readline';
 
-import {CallStack, Event, Query, RequestEvent, ResponseEvent} from '../query';
+import {CallStack, Event, Query, RequestEvent, ResponseEvent, ResultEvent} from '../query';
 
 import {QueryMap} from './types';
 
@@ -56,6 +56,33 @@ const dataToEvent = (data: string): Event|undefined => {
       const shadowRows = parseInt(splitted[8].split('=')[1]);
       return new ResponseEvent(
           nodeType, id, state, skipped, produced, shadowRows);
+    } else if (splitted[2] === 'result:') {
+      // 2020-04-12T15:07:08Z [69921] INFO [f12f9] {queries} [query#447] execute
+      // type=ReturnNode
+      // result: {"nrItems":10,"nrRegs":2,"matrix":[[null,"(non-representable
+      // type none)",1],[null,"(non-representable type
+      // none)",2],[null,"(non-representable type
+      // none)",3],[null,"(non-representable type
+      // none)",4],[null,"(non-representable type
+      // none)",5],[null,"(non-representable type
+      // none)",6],[null,"(non-representable type
+      // none)",7],[null,"(non-representable type
+      // none)",8],[null,"(non-representable type
+      // none)",9],[null,"(non-representable type none)",10]]}
+      const nodeType = splitted[1].split('=')[1];
+      // pop the first 3 elements
+      splitted.shift();
+      splitted.shift();
+      splitted.shift();
+      const joined = splitted.join(' ');
+      try {
+        const obj = joined === 'nullptr' ? {nrItems: 0, nrRegs: 0, matrix: []} :
+                                           JSON.parse(joined);
+        return new ResultEvent(nodeType, obj);
+      } catch (e) {
+        console.log(`Failed to parse result information ${e}`, joined);
+        return;
+      }
     } else {
       // This is a request
       // Obviously this is super error save!

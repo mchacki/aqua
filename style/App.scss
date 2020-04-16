@@ -1,1 +1,18 @@
 @import "~bootstrap";
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  tr.shadowRow {
+      background-color: lightgrey;
+  }
+
+  tr.dataRow{
+      background-color: white;
+  }
+
+  td.deadRegister{
+    background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), red, transparent calc(50% + 1px)); 
+  }
