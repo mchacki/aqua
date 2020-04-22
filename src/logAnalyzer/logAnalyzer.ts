@@ -25,6 +25,11 @@ class LineData {
     const parts = line.split(' ');
     this.timestamp = parts.shift();
     this.pid = removeBraces(parts.shift());
+    if (parts[0] === 'C' || parts[0] === 'P' || parts[0] === 'S' ||
+        parts[0] === 'A') {
+      // Ignore for now, role of server!
+      parts.shift();
+    }
     this.level = parts.shift();
     this.logId = removeBraces(parts.shift());
     this.topic = removeBraces(parts.shift());
@@ -112,8 +117,12 @@ export const analyzeLog = async(log: string): Promise<QueryMap> => {
   const result: QueryMap = new Map();
 
   const readInterface = createInterface(createReadStream(log));
-
+  console.log('Start reading');
+  let lineNr = 0;
   for await (const line of readInterface) {
+    if (++lineNr % 1000 === 0) {
+      console.log(`Processed lines ${lineNr}`);
+    }
     const parsed = new LineData(line);
     if (parsed.topic === 'queries') {
       if (typeof parsed.queryId === 'string') {

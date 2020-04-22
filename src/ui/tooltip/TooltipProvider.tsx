@@ -5,6 +5,7 @@ import { reducer } from "./reducer";
 const initialState: State = {
     visible: false,
     content: () => (<></>),
+    pinnedContent: () => (<></>),
     top: 0,
     left: 0
 };

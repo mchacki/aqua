@@ -5,7 +5,7 @@ import { NavMenu } from './ui/navigation';
 import '../style/App.scss';
 import { AnalysisProvider } from './ui/analysis';
 import { QueryList } from './ui/query';
-import { TooltipProvider, Tooltip } from './ui/tooltip';
+import { TooltipProvider, Tooltip, PinnedView } from './ui/tooltip';
 
 const Index = () => {
     return <>
@@ -15,6 +15,7 @@ const Index = () => {
                 <QueryList />
             </AnalysisProvider>
             <Tooltip></Tooltip>
+            <PinnedView></PinnedView>
         </TooltipProvider>
     </>;
 };

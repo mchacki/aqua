@@ -61,13 +61,16 @@ export class Positioner {
     return [x, this.alignToTopNode(y), x, this.alignToBottomNode(y)];
   }
 
+  eventXPosition(eventIndex: number):
+      number{return this.getXPosition(eventIndex)};
+
   requiredHeight(): number {
     return (this._numNodes + 1) * (defaultHeight + paddingVertical);
   }
 
   requiredWidth(): number {
-    if (this._numEvents > 100) {
-      return 10 + execNodeWidth + 101 * eventWidth;
+    if (this._numEvents > 500) {
+      return 10 + execNodeWidth + 501 * eventWidth;
     }
     return 10 + execNodeWidth + (this._numEvents + 1) * eventWidth;
   }

@@ -12,8 +12,14 @@ type MatrixRowInput = {
 
 const MatrixRow = ({ row }: MatrixRowInput) => {
     const shadow = (row[0] !== null);
+    const shortenedString = (text: string) => {
+        if (text.length > 50) {
+            return `${text.substr(0, 49)}...`;
+        }
+        return text;
+    };
     return (<tr className={shadow ? "shadowRow" : "dataRow"}>
-        {row.map((c, i) => (c === "(non-representable type none)" ? (<td key={i} className="deadRegister">-</td>) : (<td key={i}>{JSON.stringify(c)}</td>)))}
+        {row.map((c, i) => (c === "(non-representable type none)" ? (<td key={i} className="deadRegister">-</td>) : (<td key={i}>{shortenedString(JSON.stringify(c))}</td>)))}
     </tr>);
 }
 

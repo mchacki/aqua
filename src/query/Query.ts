@@ -40,4 +40,9 @@ export class Query {
       }
 
   nodes = (): Node[] => this._nodes;
+
+  eventsForNode = (node: Node): Event[] => {
+    return this._events.filter(
+        e => e instanceof RequestEvent && e.nodeId == node.id);
+  }
 }
