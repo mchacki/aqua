@@ -29,7 +29,7 @@
     "bootstrap": "^4.4.1",
     "chai": "^4.2.0",
     "css-loader": "^3.5.2",
-    "electron": "^6.0.8",
+    "electron": "^11.5.0",
     "html-webpack-plugin": "^4.2.0",
     "ignore-styles": "^5.0.1",
     "konva": "^4.2.2",
