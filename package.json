@@ -33,7 +33,7 @@
     "html-webpack-plugin": "^4.2.0",
     "ignore-styles": "^5.0.1",
     "konva": "^4.2.2",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
